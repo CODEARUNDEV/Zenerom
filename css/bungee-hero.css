@@ -1,0 +1,494 @@
+/* ==========================================================================
+   bungee-hero.css - 100% Exact Bungee Hero & Marquee System for Zenerom
+   ========================================================================== */
+
+/* 1. Main Hero Container */
+.hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 750px;
+  max-height: 1080px;
+  padding-top: 105px;
+  padding-bottom: 24px;
+  overflow: hidden;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.hero-content-wrapper {
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+/* 2. Top Block: Large Zenerom Logo & Subtitle */
+.hero-top-block {
+  grid-row-gap: 28px;
+  text-align: center;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  animation: heroSlideDown 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes heroSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-large-logo {
+  font-family: 'Outfit', 'Inter Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(4.5rem, 13.5vw, 10.5rem);
+  font-weight: 900;
+  color: #1e1e1e;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  text-transform: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.hero-large-logo .hero-reg,
+.hero-large-logo sup {
+  font-size: 0.22em;
+  font-weight: 800;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: 0.06em;
+  line-height: 1;
+  margin-left: 0;
+  letter-spacing: 0;
+}
+
+.heading-style-h5 {
+  font-family: 'Inter Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #1e1e1e;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+/* 3. Bottom Block: Metadata and Marquee */
+.hero-bottom-block {
+  grid-row-gap: 28px;
+  flex-flow: column;
+  display: flex;
+  overflow: visible;
+  width: 100%;
+}
+
+.hero-bottom-top-block {
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  position: relative;
+  overflow: visible;
+  animation: heroFadeIn 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes heroFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.hero-left-time-block {
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  flex: none;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  left: 32px;
+  bottom: 0;
+  transform-origin: 0% 100%;
+  transform: rotate(-90deg) translate3d(0, 0, 0);
+  white-space: nowrap;
+}
+
+.paragraph-text-mono {
+  font-family: 'Chivo Mono', monospace, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  color: #1e1e1e;
+  letter-spacing: 0.02em;
+}
+
+.social-links-block {
+  grid-column-gap: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.social-link {
+  font-family: 'Chivo Mono', monospace, sans-serif;
+  color: #1e1e1e;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  text-decoration: underline rgba(0, 0, 0, 0);
+  transition: text-decoration-color 0.35s ease-in-out;
+}
+
+.social-link:hover {
+  text-decoration-color: #1e1e1e;
+}
+
+/* 4. Marquee Outer Wrapper & Gradient Edge Fade */
+.hero-marquee-wrapper-outer-block {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  animation: heroSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+@keyframes heroSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-marquee-top-mask-effect {
+  background-image: linear-gradient(90deg, #fff, #fff 2.5%, rgba(255, 255, 255, 0) 12.5% 87.5%, #fff 97.5%, #fff);
+  position: absolute;
+  inset: 0%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hero-marquee-wrapper {
+  grid-column-gap: 10px;
+  height: 520px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Continuous 30s silky marquee track */
+.hero-marquee-block {
+  grid-column-gap: 10px;
+  flex: none;
+  justify-content: flex-start;
+  display: flex;
+  align-items: stretch;
+  animation: heroMarqueeScroll 30s linear infinite;
+  will-change: transform;
+}
+
+@keyframes heroMarqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-100% - 10px), 0, 0);
+  }
+}
+
+.hero-marquee-item {
+  grid-column-gap: 10px;
+  flex: none;
+  display: flex;
+}
+
+/* Arched Cards (Tombstone Shape & Alternating Radii) */
+.hero-item-single {
+  border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  flex: none;
+  width: 181px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.hero-item-single.v2 {
+  border-radius: 0 80px 0 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-marquee-asset {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-marquee-asset.w-background-video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-marquee-asset.w-background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* Exact transform scalings from Bungee template */
+.hero-marquee-asset._02 {
+  width: 530px;
+  height: 530px;
+  max-width: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-marquee-asset._04 {
+  width: 366px;
+  height: 528px;
+  max-width: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-marquee-asset._05 {
+  transform: scale(1.5, 1.2);
+}
+
+.hero-marquee-asset._06 {
+  transform: scale(2.2, 2.5);
+}
+
+.hero-marquee-asset._07 {
+  transform: scale(1.2, 1.4);
+}
+
+/* 5. Statement Section (.home-about) */
+.home-about {
+  padding: 120px 32px 90px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.home-about-content-wrapper {
+  grid-row-gap: 36px;
+  flex-flow: column;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.home-about-text-block {
+  text-align: center;
+  width: 100%;
+}
+
+.heading-style-h3 {
+  font-family: 'Inter Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(1.75rem, 3.2vw, 2.6rem);
+  line-height: 1.32;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #1e1e1e;
+  margin: 0;
+}
+
+/* 6. Partner Logos Continuous Marquee */
+.partners-marquee-wrapper {
+  grid-column-gap: 80px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.partners-marquee-effect {
+  z-index: 2;
+  background-image: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0) 12.5% 87.5%, #fff);
+  position: absolute;
+  inset: 0%;
+  pointer-events: none;
+}
+
+.partners-marquee-block {
+  grid-column-gap: 80px;
+  flex: none;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  animation: partnersMarqueeScroll 35s linear infinite;
+  will-change: transform;
+}
+
+@keyframes partnersMarqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-100% - 80px), 0, 0);
+  }
+}
+
+.partner-logo {
+  height: 28px;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(100%);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* 7. Responsive Breakpoints */
+@media screen and (max-width: 991px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding-top: 100px;
+    padding-bottom: 24px;
+  }
+  .hero-content-wrapper {
+    grid-row-gap: 60px;
+  }
+  .hero-top-block {
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-row-gap: 20px;
+  }
+  .hero-bottom-top-block {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .hero-left-time-block {
+    left: 24px;
+  }
+  .hero-marquee-wrapper {
+    height: 420px;
+  }
+  .hero-item-single {
+    width: 145px;
+    height: 420px;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  .hero-item-single.v2 {
+    border-radius: 0 60px 0 60px;
+  }
+  .home-about {
+    padding: 80px 24px 60px;
+  }
+  .partners-marquee-block {
+    grid-column-gap: 50px;
+  }
+  .partners-marquee-wrapper {
+    grid-column-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 85px;
+    padding-bottom: 16px;
+  }
+  .hero-content-wrapper {
+    grid-row-gap: 40px;
+  }
+  .hero-top-block {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    grid-row-gap: 16px;
+  }
+  .hero-large-logo {
+    font-size: clamp(3.2rem, 15vw, 5.8rem);
+  }
+  .heading-style-h5 {
+    font-size: 0.95rem;
+  }
+  .hero-bottom-top-block {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hero-left-time-block {
+    left: 16px;
+    font-size: 0.72rem;
+  }
+  .social-link {
+    font-size: 0.72rem;
+  }
+  .hero-marquee-wrapper {
+    height: 310px;
+  }
+  .hero-item-single {
+    width: 108px;
+    height: 310px;
+    border-top-left-radius: 44px;
+    border-bottom-right-radius: 44px;
+  }
+  .hero-item-single.v2 {
+    border-radius: 0 44px 0 44px;
+  }
+  .home-about {
+    padding: 60px 16px 40px;
+  }
+  .home-about-content-wrapper {
+    grid-row-gap: 24px;
+  }
+  .heading-style-h3 {
+    font-size: 1.45rem;
+  }
+  .partners-marquee-block {
+    grid-column-gap: 36px;
+  }
+  .partners-marquee-wrapper {
+    grid-column-gap: 36px;
+  }
+  .partner-logo {
+    height: 22px;
+  }
+}

@@ -1,0 +1,972 @@
+/* ==========================================================================
+   case-study.css - Premium Single Case Study Experience
+   Zenerom UAE Digital Marketing & Technology Agency
+   ========================================================================== */
+
+:root {
+  --cs-bg: #ffffff;
+  --cs-bg-subtle: #f9f9fb;
+  --cs-bg-card: #ffffff;
+  --cs-border: rgba(12, 2, 56, 0.07);
+  --cs-border-light: rgba(12, 2, 56, 0.04);
+  --cs-text-primary: #0a0a0a;
+  --cs-text-secondary: #4a5568;
+  --cs-text-muted: #718096;
+  --cs-accent: #f26934;
+  --cs-accent-glow: rgba(242, 105, 52, 0.16);
+  --cs-accent-subtle: rgba(242, 105, 52, 0.06);
+  --cs-radius-lg: 24px;
+  --cs-radius-md: 16px;
+  --cs-radius-sm: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Reading Progress Bar
+   -------------------------------------------------------------------------- */
+.cs-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--brand-flamingo, #f26934), #ff8a50);
+  z-index: 99999;
+  transition: width 0.1s linear;
+}
+
+/* --------------------------------------------------------------------------
+   2. Page Container & Hero Layout
+   -------------------------------------------------------------------------- */
+.cs-single-page {
+  position: relative;
+  width: 100%;
+  background-color: var(--cs-bg);
+  overflow-x: hidden;
+}
+
+.cs-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Hero Section */
+.cs-hero {
+  padding-top: 130px;
+  padding-bottom: 40px;
+  background: radial-gradient(circle at 80% 20%, rgba(242, 105, 52, 0.04) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(12, 2, 56, 0.02) 0%, transparent 50%),
+              #ffffff;
+  position: relative;
+}
+
+.cs-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  color: var(--cs-text-muted);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cs-breadcrumbs a {
+  color: var(--cs-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cs-breadcrumbs a:hover {
+  color: var(--cs-accent);
+}
+
+.cs-breadcrumbs-sep {
+  color: #cbd5e1;
+  font-size: 0.75rem;
+}
+
+.cs-breadcrumbs-current {
+  color: var(--cs-text-primary);
+  font-weight: 600;
+}
+
+.cs-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cs-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  background-color: var(--brand-black-rock, #0c0238);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cs-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--cs-accent);
+  animation: csPulse 2s infinite ease-in-out;
+}
+
+@keyframes csPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.85); }
+}
+
+.cs-timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background-color: var(--cs-bg-subtle);
+  border: 1px solid var(--cs-border);
+  color: var(--cs-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cs-hero-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--cs-text-primary);
+  margin: 0 0 1.25rem;
+  max-width: 1050px;
+}
+
+.cs-hero-summary {
+  font-size: clamp(1.05rem, 1.4vw, 1.28rem);
+  line-height: 1.65;
+  color: var(--cs-text-secondary);
+  margin: 0 0 2rem;
+  max-width: 900px;
+}
+
+/* Key Metadata Strip */
+.cs-meta-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  background: #ffffff;
+  border: 1px solid var(--cs-border);
+  border-radius: var(--cs-radius-md);
+  margin-bottom: 2rem;
+}
+
+.cs-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cs-meta-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cs-text-muted);
+}
+
+.cs-meta-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cs-text-primary);
+}
+
+.cs-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.cs-meta-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background-color: var(--cs-bg-subtle);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: var(--cs-text-secondary);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   3. Highlight Metrics Banner
+   -------------------------------------------------------------------------- */
+.cs-metrics-banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.cs-metric-card {
+  padding: 1.85rem 1.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, var(--cs-bg-subtle) 100%);
+  border: 1px solid var(--cs-border);
+  border-radius: var(--cs-radius-md);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cs-metric-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--cs-accent);
+  opacity: 0.8;
+}
+
+.cs-metric-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(242, 105, 52, 0.3);
+}
+
+.cs-metric-number {
+  font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+  font-weight: 900;
+  color: var(--cs-accent);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.cs-metric-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cs-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero Visual Showcase
+   -------------------------------------------------------------------------- */
+.cs-visual-showcase {
+  position: relative;
+  width: 100%;
+  border-radius: var(--cs-radius-lg);
+  overflow: hidden;
+  background-color: #0c0238;
+  margin-bottom: 4rem;
+  box-shadow: 0 20px 45px -15px rgba(12, 2, 56, 0.12);
+  border: 1px solid rgba(12, 2, 56, 0.08);
+}
+
+.cs-visual-img {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-visual-showcase:hover .cs-visual-img {
+  transform: scale(1.02);
+}
+
+.cs-visual-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(12, 2, 56, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cs-visual-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+/* --------------------------------------------------------------------------
+   5. Deep-Dive Body Layout (2 Columns)
+   -------------------------------------------------------------------------- */
+.cs-body-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+/* Sticky Sidebar */
+.cs-sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cs-sidebar-card {
+  background: #ffffff;
+  border: 1px solid var(--cs-border);
+  border-radius: var(--cs-radius-md);
+  padding: 1.5rem;
+}
+
+.cs-sidebar-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--cs-text-muted);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cs-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cs-toc-link {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--cs-text-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
+.cs-toc-link:hover,
+.cs-toc-link.is-active {
+  color: var(--cs-accent);
+  background-color: var(--cs-accent-subtle);
+  border-left-color: var(--cs-accent);
+  padding-left: 0.8rem;
+  font-weight: 600;
+}
+
+/* Sidebar CTA Card */
+.cs-sidebar-cta {
+  background: linear-gradient(145deg, #0c0238 0%, #17075c 100%);
+  border-radius: var(--cs-radius-md);
+  padding: 1.75rem 1.5rem;
+  color: #ffffff;
+  text-align: left;
+}
+
+.cs-sidebar-cta-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #ffffff;
+}
+
+.cs-sidebar-cta-desc {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+  margin: 0 0 1.25rem;
+}
+
+.cs-sidebar-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--cs-accent);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cs-sidebar-cta-btn:hover {
+  background-color: #d85724;
+  transform: translateY(-2px);
+}
+
+.cs-sidebar-wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cs-sidebar-wa-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* --------------------------------------------------------------------------
+   6. Main Content Sections
+   -------------------------------------------------------------------------- */
+.cs-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.cs-section {
+  scroll-margin-top: 120px;
+}
+
+.cs-section-header {
+  margin-bottom: 1.5rem;
+}
+
+.cs-section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cs-accent);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.cs-section-title {
+  font-size: clamp(1.65rem, 2.5vw, 2.15rem);
+  font-weight: 800;
+  color: var(--cs-text-primary);
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+/* Challenge Callout Card */
+.cs-challenge-card {
+  padding: 2rem;
+  background-color: #fff9f6;
+  border: 1px solid rgba(242, 105, 52, 0.18);
+  border-radius: var(--cs-radius-md);
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.cs-challenge-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+}
+
+/* Strategic Solution Steps */
+.cs-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.cs-step-card {
+  padding: 1.75rem;
+  background: #ffffff;
+  border: 1px solid var(--cs-border);
+  border-radius: var(--cs-radius-md);
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  transition: all 0.3s ease;
+}
+
+.cs-step-card:hover {
+  border-color: rgba(242, 105, 52, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -10px rgba(12, 2, 56, 0.06);
+}
+
+.cs-step-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: var(--brand-black-rock, #0c0238);
+  color: var(--cs-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.cs-step-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cs-text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.cs-step-desc {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--cs-text-secondary);
+  margin: 0;
+}
+
+/* Secondary Visual / Showcase */
+.cs-secondary-visual-wrap {
+  margin-top: 2rem;
+  border-radius: var(--cs-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--cs-border);
+  box-shadow: 0 12px 30px -10px rgba(12, 2, 56, 0.08);
+}
+
+.cs-secondary-visual-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tech Stack & Deliverables Grid */
+.cs-stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.cs-stack-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.15rem;
+  background: var(--cs-bg-subtle);
+  border: 1px solid var(--cs-border);
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cs-text-primary);
+  transition: all 0.2s ease;
+}
+
+.cs-stack-chip:hover {
+  background: #ffffff;
+  border-color: var(--cs-accent);
+  color: var(--cs-accent);
+  transform: translateY(-2px);
+}
+
+.cs-stack-check {
+  color: var(--cs-accent);
+  font-weight: 800;
+}
+
+/* Quantified Results Grid */
+.cs-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.cs-result-box {
+  padding: 1.75rem 1.25rem;
+  background: linear-gradient(135deg, #0c0238 0%, #1a0868 100%);
+  border-radius: var(--cs-radius-md);
+  color: #ffffff;
+  text-align: center;
+}
+
+.cs-result-num {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 900;
+  color: var(--cs-accent);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.cs-result-lbl {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Testimonial Quote Box */
+.cs-testimonial-card {
+  padding: 2.25rem;
+  background: radial-gradient(circle at 10% 20%, rgba(242, 105, 52, 0.05) 0%, transparent 60%),
+              #ffffff;
+  border: 1px solid var(--cs-border);
+  border-left: 4px solid var(--cs-accent);
+  border-radius: var(--cs-radius-md);
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.cs-quote-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--cs-accent);
+  opacity: 0.4;
+  margin-bottom: 0.75rem;
+  font-family: Georgia, serif;
+}
+
+.cs-quote-text {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--cs-text-primary);
+  font-style: italic;
+  font-weight: 500;
+  margin: 0 0 1.5rem;
+}
+
+.cs-quote-author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.cs-author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--brand-black-rock, #0c0238);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.cs-author-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--cs-text-primary);
+}
+
+.cs-author-role {
+  font-size: 0.82rem;
+  color: var(--cs-text-muted);
+}
+
+.cs-stars-row {
+  margin-left: auto;
+  color: #f59e0b;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Next Project Navigation Card
+   -------------------------------------------------------------------------- */
+.cs-next-wrap {
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--cs-border);
+}
+
+.cs-next-card {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(135deg, #0c0238 0%, #16075c 100%);
+  border-radius: var(--cs-radius-lg);
+  color: #ffffff;
+  text-decoration: none;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs-next-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -15px rgba(12, 2, 56, 0.3);
+}
+
+.cs-next-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cs-accent);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cs-next-title {
+  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.cs-next-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  transition: gap 0.2s ease;
+}
+
+.cs-next-card:hover .cs-next-arrow-btn {
+  gap: 0.9rem;
+  color: var(--cs-accent);
+}
+
+.cs-next-thumb {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--cs-radius-md);
+  object-fit: cover;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   8. Related Case Studies Grid
+   -------------------------------------------------------------------------- */
+.cs-related-section {
+  padding: 4rem 0 5rem;
+  background-color: var(--cs-bg-subtle);
+}
+
+.cs-related-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cs-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.cs-related-card {
+  background: #ffffff;
+  border: 1px solid var(--cs-border);
+  border-radius: var(--cs-radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs-related-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(242, 105, 52, 0.3);
+  box-shadow: 0 15px 35px -10px rgba(12, 2, 56, 0.08);
+}
+
+.cs-related-img-wrap {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background-color: #0c0238;
+}
+
+.cs-related-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cs-related-card:hover .cs-related-img {
+  transform: scale(1.05);
+}
+
+.cs-related-category-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(12, 2, 56, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.cs-related-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cs-related-client {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cs-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.cs-related-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cs-text-primary);
+  line-height: 1.35;
+  margin: 0 0 0.85rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cs-related-metric {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.3rem 0.75rem;
+  background-color: var(--cs-accent-subtle);
+  border: 1px solid rgba(242, 105, 52, 0.2);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cs-accent);
+  margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   9. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .cs-body-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .cs-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .cs-next-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-next-thumb {
+    height: 200px;
+  }
+
+  .cs-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-hero {
+    padding-top: 110px;
+    padding-bottom: 30px;
+  }
+
+  .cs-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-metrics-banner,
+  .cs-results-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cs-meta-strip {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .cs-step-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .cs-step-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .cs-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-next-card {
+    padding: 1.5rem;
+  }
+
+  .cs-visual-showcase {
+    margin-bottom: 2.5rem;
+  }
+
+  .cs-testimonial-card {
+    padding: 1.5rem;
+  }
+}

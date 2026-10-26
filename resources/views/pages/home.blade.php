@@ -374,6 +374,82 @@
     </div>
   </div>
 </section>
+
+<!-- Hero Video Showcase Block (Restored) -->
+<section class="section hero-video-showcase" style="padding-top: 10px; padding-bottom: 50px;">
+  <div class="w-layout-blockcontainer container w-container">
+    <div data-w-id="0ed03605-ba69-6f43-8b49-212fbabc3f9c" class="hero-video-block">
+      <div data-poster-url="{{ asset('assets/images/hero-poster.webp') }}" data-video-urls="{{ asset('assets/videos/14433878_1920_1080_24fps_(1)_mp4.mp4') }},{{ asset('assets/videos/14433878_1920_1080_24fps_(1)_webm.webm') }}" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="hero-video w-background-video w-background-video-atom">
+        <video id="0ed03605-ba69-6f43-8b49-212fbabc3f9d-video" autoplay loop muted playsinline style="background-image:url('{{ asset('assets/images/hero-poster.webp') }}')" data-wf-ignore="true" data-object-fit="cover">
+          <source src="{{ asset('assets/videos/14433878_1920_1080_24fps_(1)_mp4.mp4') }}" type="video/mp4" data-wf-ignore="true"/>
+          <source src="{{ asset('assets/videos/14433878_1920_1080_24fps_(1)_webm.webm') }}" type="video/webm" data-wf-ignore="true"/>
+        </video>
+        <noscript>
+          <style>
+            [data-wf-bgvideo-fallback-img] {
+              display: none;
+            }
+            @media (prefers-reduced-motion: reduce) {
+              [data-wf-bgvideo-fallback-img] {
+                position: absolute;
+                z-index: -100;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+          </style>
+          <img data-wf-bgvideo-fallback-img="true" src="{{ asset('assets/images/hero-poster.webp') }}" alt="Zenerom Video Poster"/>
+        </noscript>
+        <div aria-live="polite">
+          <button type="button" data-w-bg-video-control="true" aria-controls="0ed03605-ba69-6f43-8b49-212fbabc3f9d-video" class="w-backgroundvideo-backgroundvideoplaypausebutton video-play-button w-background-video--control" aria-label="Pause or play video">
+            <span><img src="{{ asset('assets/icons/Pause.svg') }}" loading="lazy" alt="Pause video"/></span>
+            <span hidden=""><img loading="lazy" alt="Play video" src="{{ asset('assets/icons/Play-24.svg') }}"/></span>
+          </button>
+        </div>
+        <div class="hero-video-content-block">
+          <div class="video-avatar-block">
+            <div class="video-avatar-wrap">
+              <img src="{{ asset('assets/images/video-avatar-1.webp') }}" loading="lazy" alt="Avatar Image" class="avatar-image _01"/>
+              <img src="{{ asset('assets/images/video-avatar-2.webp') }}" loading="lazy" alt="Avatar Image" class="avatar-image"/>
+              <img src="{{ asset('assets/images/video-avatar-3.webp') }}" loading="lazy" alt="Avatar Image" class="avatar-image"/>
+            </div>
+            <div class="video-avatar-right">
+              <div class="avatar-star-wrap">
+                <img src="{{ asset('assets/icons/star-01.svg') }}" loading="lazy" alt="Star" class="avatar-star"/>
+                <img src="{{ asset('assets/icons/star-01.svg') }}" loading="lazy" alt="Star" class="avatar-star"/>
+                <img src="{{ asset('assets/icons/star-01.svg') }}" loading="lazy" alt="Star" class="avatar-star"/>
+                <img src="{{ asset('assets/icons/star-01.svg') }}" loading="lazy" alt="Star" class="avatar-star"/>
+                <img src="{{ asset('assets/icons/star-01.svg') }}" loading="lazy" alt="Star" class="avatar-star"/>
+              </div>
+              <div class="avatar-text">100+ Worldwide Clients</div>
+            </div>
+          </div>
+          <div class="video-bottom-wrap">
+            <div class="video-left-wrap">
+              <div class="video-left-title">Zenerom™ is built for <span class="white-text">Growth</span></div>
+            </div>
+            <div class="video-right-wrap">
+              <div class="video-content-title">#1 Digital Growth Partner Dubai</div>
+              <div class="video-icon-wrapper">
+                <img src="{{ asset('assets/icons/newletter-icon-1.svg') }}" loading="lazy" alt="Award Wreath Left" class="video-icon left"/>
+                <div class="video-icon-wrap">
+                  <img src="{{ asset('assets/icons/newletter-icon-2.svg') }}" loading="lazy" alt="Partner Logo" class="video-icon"/>
+                  <img src="{{ asset('assets/icons/newletter-icon-3.svg') }}" loading="lazy" alt="Partner Logo" class="video-icon _02"/>
+                  <img src="{{ asset('assets/icons/newletter-icon-4.svg') }}" loading="lazy" alt="Partner Logo" class="video-icon _03"/>
+                  <img src="{{ asset('assets/icons/newletter-icon-5.svg') }}" loading="lazy" alt="Partner Logo" class="video-icon _04"/>
+                </div>
+                <img src="{{ asset('assets/icons/newletter-icon-6.svg') }}" loading="lazy" alt="Award Wreath Right" class="video-icon left"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section_work-list" id="work">
   <div class="work-list_divider">
     <div class="work-list_divider-line" id="workDividerLine"></div>

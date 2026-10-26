@@ -1614,7 +1614,58 @@ button.faq-single-item {
   opacity: 0.9 !important;
 }
 
+.hero-video-showcase {
+  position: relative !important;
+  width: 100% !important;
+}
 
+.hero-video-showcase .hero-video-block {
+  margin-top: 0 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-video-block {
+    height: 500px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-video-block {
+    height: 440px !important;
+  }
+  .hero-video-content-block {
+    padding: 24px 20px !important;
+  }
+  .video-left-title {
+    font-size: 24px !important;
+  }
+  .video-bottom-wrap {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  .video-right-wrap {
+    align-items: flex-start !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-video-block {
+    height: 390px !important;
+  }
+  .video-left-title {
+    font-size: 20px !important;
+  }
+  .avatar-text {
+    font-size: 13px !important;
+  }
+  .video-content-title {
+    font-size: 12px !important;
+  }
+  .video-icon {
+    max-width: 65px !important;
+  }
+}
 
 /* ==========================================================================
    Bungee Hero Section & Infinite Partners Marquee (Critical Baseline)

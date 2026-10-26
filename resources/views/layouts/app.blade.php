@@ -43,10 +43,10 @@
     @endif
 
     <!-- Optimized Baseline Stylesheets (Pre-compressed Gzip) -->
-    <link rel="stylesheet" href="{{ asset('css/style.min.css?v=140') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/responsive.min.css?v=140') }}"/>
-    <link rel="preload" href="{{ asset('css/animations.min.css?v=140') }}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <noscript><link rel="stylesheet" href="{{ asset('css/animations.min.css?v=140') }}"/></noscript>
+    <link rel="stylesheet" href="{{ asset('css/style.min.css?v=141') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/responsive.min.css?v=141') }}"/>
+    <link rel="preload" href="{{ asset('css/animations.min.css?v=141') }}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="stylesheet" href="{{ asset('css/animations.min.css?v=141') }}"/></noscript>
     
     <!-- Global Structured Data / Schema -->
     <script type="application/ld+json">
@@ -111,7 +111,7 @@
 </div>
 
 <!-- Core Engine Script (Bundled & Deferred for 0ms Total Blocking Time) -->
-<script src="{{ asset('js/app.min.js?v=140') }}" defer></script>
+<script src="{{ asset('js/app.min.js?v=141') }}" defer></script>
 
 @stack('scripts')
 </body>

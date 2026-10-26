@@ -41,13 +41,15 @@
   transform: translateX(0%);
 }
 
-/* Sidemenu nav links */
-.sidemenu .nav-link {
-  height: 46px;
-}
+/* Sidemenu nav links (Desktop Dual-Roll Animation) */
+@media screen and (min-width: 992px) {
+  .sidemenu .nav-link {
+    height: 46px;
+  }
 
-.sidemenu .nav-link:hover .nav-link-text {
-  transform: translateY(-100%);
+  .sidemenu .nav-link:hover .nav-link-text {
+    transform: translateY(-100%);
+  }
 }
 
 /* Footer Link Dual Text Roll */

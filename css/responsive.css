@@ -5749,12 +5749,49 @@ blockquote {
     padding-left: 40px;
   }
 
+  /* Hide Desktop Header Links on Tablet & Mobile (Links only live in offcanvas) */
+  .menu-link-wrap,
+  .navbar-manu-block .menu-link-wrap,
+  .nav-link.w-variant-8bf4848c-d668-0e79-80f7-76227d1ca8df,
   .nav-link:where(.w-variant-8bf4848c-d668-0e79-80f7-76227d1ca8df) {
-    display: none;
+    display: none !important;
   }
 
-  .nav-link:where(.w-variant-c7b762d7-8c19-251e-cdaf-deb7dd9e8ab7) {
-    height: 39.6px;
+  /* Offcanvas Sidemenu Clean Display (No Duplicate Text Roll on Touch Screens) */
+  .sidemenu .nav-link [text-bottom],
+  .sidemenu .footer-link [text-bottom] {
+    display: none !important;
+  }
+
+  .sidemenu .nav-link {
+    height: auto !important;
+    min-height: 44px;
+    display: inline-flex !important;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden !important;
+  }
+
+  .sidemenu .nav-link-text {
+    transform: none !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Mobile Header Menu Button Pill */
+  .menu-open-block {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    background-color: rgba(12, 2, 56, 0.05);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .menu-open-block:active {
+    background-color: rgba(242, 105, 52, 0.15);
+    transform: scale(0.96);
   }
 
   .cta-title {
@@ -7080,8 +7117,7 @@ a, button, input, select, textarea, [role="button"] {
     line-height: 1.35 !important;
   }
 
-  /* Minimum touch target size 44px */
-  .nav-link,
+  /* Minimum touch target size 44px (Buttons only - not nav-link dual-roll text) */
   .menu-button,
   .primary-button,
   .secondary-button,
@@ -7092,6 +7128,22 @@ a, button, input, select, textarea, [role="button"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  /* Accessible Sidemenu Close Target on Mobile */
+  .manu-close-block {
+    width: 44px;
+    height: 44px;
+    inset: 12px 16px auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .manu-close {
+    width: 20px;
+    height: 20px;
   }
 }
 

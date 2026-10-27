@@ -185,7 +185,7 @@
 
         <div class="solution-feature-visual">
           <div class="solution-visual-card">
-            <img src="{{ asset('assets/images/work-image-1.webp') }}" alt="Performance & Lead Engine Architecture" class="sol-visual-graphic" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-10.webp?v=2') }}" alt="Performance & Lead Engine Architecture" class="sol-visual-graphic" loading="lazy"/>
             <div class="sol-architecture-card">
               <div class="sol-arch-header">
                 <div class="sol-arch-title">Acquisition Flow</div>
@@ -258,7 +258,7 @@
 
         <div class="solution-feature-visual">
           <div class="solution-visual-card">
-            <img src="{{ asset('assets/images/work-image-3.webp') }}" alt="Headless Commerce Ecosystem" class="sol-visual-graphic" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-8.webp?v=2') }}" alt="Headless Commerce Ecosystem" class="sol-visual-graphic" loading="lazy"/>
             <div class="sol-architecture-card">
               <div class="sol-arch-header">
                 <div class="sol-arch-title">Commerce Pipeline</div>
@@ -340,7 +340,7 @@
 
         <div class="solution-feature-visual">
           <div class="solution-visual-card">
-            <img src="{{ asset('assets/images/work-image-4.webp') }}" alt="WhatsApp Conversational AI and CRM Automation" class="sol-visual-graphic" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-7.webp?v=2') }}" alt="WhatsApp Conversational AI and CRM Automation" class="sol-visual-graphic" loading="lazy"/>
             <div class="sol-architecture-card">
               <div class="sol-arch-header">
                 <div class="sol-arch-title">Conversational Engine</div>
@@ -413,7 +413,7 @@
 
         <div class="solution-feature-visual">
           <div class="solution-visual-card">
-            <img src="{{ asset('assets/images/work-image-2.webp') }}" alt="Multi-Emirate Local Search Supremacy" class="sol-visual-graphic" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-1.webp?v=2') }}" alt="Multi-Emirate Local Search Supremacy" class="sol-visual-graphic" loading="lazy"/>
             <div class="sol-architecture-card">
               <div class="sol-arch-header">
                 <div class="sol-arch-title">Local Search Funnel</div>
@@ -568,7 +568,7 @@
 
         <div class="solution-feature-visual">
           <div class="solution-visual-card">
-            <img src="{{ asset('assets/images/work-image-5.webp') }}" alt="Creative Brand Strategy and CRO" class="sol-visual-graphic" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-3.webp?v=2') }}" alt="Creative Brand Strategy and CRO" class="sol-visual-graphic" loading="lazy"/>
             <div class="sol-architecture-card">
               <div class="sol-arch-header">
                 <div class="sol-arch-title">Creative Impact</div>

@@ -204,7 +204,7 @@
             <div class="work-cl-item" data-category="web corporate">
               <a href="{{ route('work.show', 'spearhead-training') }}" class="work-single-block w-inline-block">
                 <div class="work-image-wrap">
-                  <img src="{{ asset('assets/images/work-image-2.webp') }}" loading="lazy" alt="Spearhead Training Case Study" class="work-image"/>
+                  <img src="{{ asset('assets/images/work-image-2.webp?v=2') }}" loading="lazy" alt="Spearhead Training Case Study" class="work-image"/>
                   <div class="work-image-hover">
                     <div class="work-category">View Case Study ↗</div>
                   </div>
@@ -235,7 +235,7 @@
             <div class="work-cl-item" data-category="web industrial">
               <a href="{{ route('work.show', 'genyard-energy') }}" class="work-single-block w-inline-block">
                 <div class="work-image-wrap">
-                  <img src="{{ asset('assets/images/work-image-8.webp') }}" loading="lazy" alt="Genyard Energy Case Study" class="work-image"/>
+                  <img src="{{ asset('assets/images/work-image-8.webp?v=2') }}" loading="lazy" alt="Genyard Energy Case Study" class="work-image"/>
                   <div class="work-image-hover">
                     <div class="work-category">View Case Study ↗</div>
                   </div>
@@ -297,7 +297,7 @@
             <div class="work-cl-item" data-category="web ecommerce">
               <a href="{{ route('work.show', 'tourzone-travel') }}" class="work-single-block w-inline-block">
                 <div class="work-image-wrap">
-                  <img src="{{ asset('assets/images/work-image-1.webp') }}" loading="lazy" alt="Tourzone Travel Case Study" class="work-image"/>
+                  <img src="{{ asset('assets/images/work-image-1.webp?v=2') }}" loading="lazy" alt="Tourzone Travel Case Study" class="work-image"/>
                   <div class="work-image-hover">
                     <div class="work-category">View Case Study ↗</div>
                   </div>
@@ -364,7 +364,7 @@
             <div class="work-cl-item" data-category="seo industrial">
               <a href="{{ route('work.show', 'dewa-approvals') }}" class="work-single-block w-inline-block">
                 <div class="work-image-wrap">
-                  <img src="{{ asset('assets/images/work-image-7.webp') }}" loading="lazy" alt="DEWA Approvals Case Study" class="work-image"/>
+                  <img src="{{ asset('assets/images/work-image-7.webp?v=2') }}" loading="lazy" alt="DEWA Approvals Case Study" class="work-image"/>
                   <div class="work-image-hover">
                     <div class="work-category">View Case Study ↗</div>
                   </div>
@@ -457,7 +457,7 @@
             <div class="work-cl-item" data-category="web">
               <a href="{{ route('work.show', 'mai-events') }}" class="work-single-block w-inline-block">
                 <div class="work-image-wrap">
-                  <img src="{{ asset('assets/images/work-image-4.webp') }}" loading="lazy" alt="MAI Events Case Study" class="work-image"/>
+                  <img src="{{ asset('assets/images/work-image-4.webp?v=2') }}" loading="lazy" alt="MAI Events Case Study" class="work-image"/>
                   <div class="work-image-hover">
                     <div class="work-category">View Case Study ↗</div>
                   </div>
@@ -488,7 +488,7 @@
             <div class="work-cl-item" data-category="seo industrial">
               <a href="{{ route('work.show', 'voltronix-seo') }}" class="work-single-block w-inline-block">
                 <div class="work-image-wrap">
-                  <img src="{{ asset('assets/images/work-image-5.webp') }}" loading="lazy" alt="Voltronix UAE Case Study" class="work-image"/>
+                  <img src="{{ asset('assets/images/work-image-5.webp?v=2') }}" loading="lazy" alt="Voltronix UAE Case Study" class="work-image"/>
                   <div class="work-image-hover">
                     <div class="work-category">View Case Study ↗</div>
                   </div>

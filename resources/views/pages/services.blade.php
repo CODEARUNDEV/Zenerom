@@ -98,7 +98,7 @@
         <!-- Pillar 1: Search Dominance -->
         <div class="pillar-card reveal-on-scroll">
           <div class="pillar-media">
-            <img src="{{ asset('assets/images/work-image-1.webp') }}" alt="SEO & Search Marketing" class="pillar-media-img" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-1.webp?v=2') }}" alt="SEO & Search Marketing" class="pillar-media-img" loading="lazy"/>
             <div class="pillar-metric-badge">
               <div class="pillar-metric-dot"></div>
               <span>+340% Avg Organic Traffic Growth</span>
@@ -140,7 +140,7 @@
         <!-- Pillar 2: Performance Marketing -->
         <div class="pillar-card reveal-on-scroll">
           <div class="pillar-media">
-            <img src="{{ asset('assets/images/work-image-2.webp') }}" alt="Performance Marketing" class="pillar-media-img" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-2.webp?v=2') }}" alt="Performance Marketing" class="pillar-media-img" loading="lazy"/>
             <div class="pillar-metric-badge">
               <div class="pillar-metric-dot"></div>
               <span>AED 45M+ Ad Spend Managed with Profit</span>
@@ -182,7 +182,7 @@
         <!-- Pillar 3: Web & App Engineering -->
         <div class="pillar-card reveal-on-scroll">
           <div class="pillar-media">
-            <img src="{{ asset('assets/images/work-image-3.webp') }}" alt="Web & App Development" class="pillar-media-img" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-4.webp?v=2') }}" alt="Web & App Development" class="pillar-media-img" loading="lazy"/>
             <div class="pillar-metric-badge">
               <div class="pillar-metric-dot"></div>
               <span>&lt;0.8s Page Load &bull; 100% Core Web Vitals</span>
@@ -224,7 +224,7 @@
         <!-- Pillar 4: Outsourcing & CRM -->
         <div class="pillar-card reveal-on-scroll">
           <div class="pillar-media">
-            <img src="{{ asset('assets/images/work-image-4.webp') }}" alt="IT Outsourcing & CRM" class="pillar-media-img" loading="lazy"/>
+            <img src="{{ asset('assets/images/service-image-7.webp?v=2') }}" alt="IT Outsourcing & CRM" class="pillar-media-img" loading="lazy"/>
             <div class="pillar-metric-badge">
               <div class="pillar-metric-dot"></div>
               <span>Dedicated Squad &bull; Zero Hiring Overhead</span>

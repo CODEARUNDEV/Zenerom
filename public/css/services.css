@@ -454,7 +454,7 @@
   font-weight: 800;
   color: var(--brand-flamingo, #f26934) !important;
   letter-spacing: 0.08em;
-  font-family: monospace;
+  font-family: 'Inter Display', Arial, sans-serif;
 }
 
 .catalog-card-badge {

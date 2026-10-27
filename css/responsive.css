@@ -252,7 +252,7 @@
 .w-widget-twitter-count-shim .w-widget-twitter-count-inner {
   text-align: center;
   color: #999;
-  font-family: serif;
+  font-family: var(--_font-family---primary-font);
   font-size: 15px;
   line-height: 12px;
   position: relative;
@@ -637,7 +637,7 @@
   -webkit-tap-highlight-color: transparent;
   background: #000000e6;
   outline: 0;
-  font-family: Helvetica Neue, Helvetica, Ubuntu, Segoe UI, Verdana, sans-serif;
+  font-family: var(--_font-family---primary-font);
   font-size: 17px;
   font-style: normal;
   font-weight: 300;

@@ -53,7 +53,7 @@
 }
 
 .hero-large-logo {
-  font-family: 'Outfit', 'Inter Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter Display', Arial, sans-serif;
   font-size: clamp(4.5rem, 13.5vw, 10.5rem);
   font-weight: 900;
   color: #1e1e1e;
@@ -133,7 +133,7 @@
 }
 
 .paragraph-text-mono {
-  font-family: 'Chivo Mono', monospace, sans-serif;
+  font-family: 'Inter Display', Arial, sans-serif;
   font-size: 0.8125rem;
   line-height: 1.2;
   color: #1e1e1e;
@@ -148,7 +148,7 @@
 }
 
 .social-link {
-  font-family: 'Chivo Mono', monospace, sans-serif;
+  font-family: 'Inter Display', Arial, sans-serif;
   color: #1e1e1e;
   font-size: 0.8125rem;
   line-height: 1.2;

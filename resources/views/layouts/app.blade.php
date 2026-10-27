@@ -28,13 +28,9 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/Fav.png') }}" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="{{ asset('assets/images/Web_Clip.png') }}"/>
     
-    <!-- Typography: Chivo Mono & Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
-    
-    <!-- Critical Asset Preloading for Sub-Second FCP & LCP -->
+    <!-- Unified Typography: Inter Display -->
     <link rel="preload" href="{{ asset('assets/fonts/InterDisplay-Regular.woff2') }}" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="{{ asset('assets/fonts/InterDisplay-Bold.woff2') }}" as="font" type="font/woff2" crossorigin="anonymous"/>
     @if(request()->is('about'))
     <link rel="preload" as="image" href="{{ asset('assets/images/bungee-about-hero-poster.jpg') }}" type="image/jpeg" fetchpriority="high"/>
     @else

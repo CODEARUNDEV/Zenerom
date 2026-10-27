@@ -948,7 +948,7 @@ textarea.form-control {
   background-color: var(--contact-bg-sand);
   padding: 8px 18px;
   border-radius: 8px;
-  font-family: monospace;
+  font-family: 'Inter Display', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--brand-flamingo, #f26934);

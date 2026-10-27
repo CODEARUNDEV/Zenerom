@@ -657,7 +657,7 @@
   color: var(--cs-accent);
   opacity: 0.4;
   margin-bottom: 0.75rem;
-  font-family: Georgia, serif;
+  font-family: 'Inter Display', Arial, sans-serif;
 }
 
 .cs-quote-text {

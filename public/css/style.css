@@ -22,7 +22,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: sans-serif;
+  font-family: 'Inter Display', Arial, sans-serif;
   box-sizing: border-box;
   overflow-x: clip;
 }
@@ -273,7 +273,7 @@ body {
   background-color: #fff;
   min-height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter Display', Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }

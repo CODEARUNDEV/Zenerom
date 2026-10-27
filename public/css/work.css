@@ -244,7 +244,7 @@
 .work-filter-count {
   font-size: 0.75rem;
   opacity: 0.8;
-  font-family: monospace;
+  font-family: 'Inter Display', Arial, sans-serif;
 }
 
 /* --------------------------------------------------------------------------
@@ -509,7 +509,7 @@
   color: #334155;
   padding: 0.25rem 0.65rem;
   border-radius: 6px;
-  font-family: monospace;
+  font-family: 'Inter Display', Arial, sans-serif;
 }
 
 /* Modal Bottom Actions */

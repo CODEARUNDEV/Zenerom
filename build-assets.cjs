@@ -14,6 +14,16 @@ fs.copyFileSync('public/css/animations.min.css', 'css/animations.min.css');
 fs.copyFileSync('css/style.css', 'public/css/style.css');
 fs.copyFileSync('css/responsive.css', 'public/css/responsive.css');
 fs.copyFileSync('css/animations.css', 'public/css/animations.css');
+const additionalCss = [
+  'case-study.css', 'services.css', 'service-single.css', 'work.css',
+  'contact.css', 'bungee-hero.css', 'blog.css', 'blog-single.css',
+  'industries.css', 'solutions.css'
+];
+for (const file of additionalCss) {
+  if (fs.existsSync('css/' + file)) {
+    fs.copyFileSync('css/' + file, 'public/css/' + file);
+  }
+}
 
 console.log('Minifying JS files...');
 execSync('npx terser js/main.js js/interactions.js js/animations.js -c -m -o public/js/app.min.js', { stdio: 'inherit' });
